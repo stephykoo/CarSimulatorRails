@@ -1,0 +1,32 @@
+<h1>Your simulated car has: </h1>
+
+<label style = "color:<%= @car.color %>">Make: <%= @car.make %></label></br>
+<label>Model Year: <%= @car.year %></label></br>
+<label>Speed: <%= @car.speed %></label></br>
+<label>Lights: <%= @car.lights %></label></br>
+<label>Brake: <%= @car.brake_status %></label></br>
+<label>Color: <%= @car.color %></label></br>
+
+<form action = "accelerate" method = "get">
+  <input type = "submit" value = "Accelerate" />
+</form>
+
+<form action = "brake" method = "get">
+  <input type = "submit" value = "Brake" />
+</form>
+
+<form action = "lights" method = "get">
+  <input type = "submit" value = "Lights On/Off" />
+</form>
+
+
+  <p>Please select your brake setting:</p>
+  <div>
+    <form action = "brake_set" method = "get">
+      <input type="radio" name="brake" value=true>
+      <label>Brake Set</label>
+      <input type="radio" name="brake" value=false>
+      <label>Brake Release</label>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
